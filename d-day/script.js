@@ -102,9 +102,11 @@ function handleResetSubmit(event) {
   
   hideViewInterface();
   paintSetInterface();
+  clearInterval(intervalID);
+  resetTimeOver();
+
   dDayString = "";
   saveDDay();
-  clearInterval(intervalID);
 }
 
 function paintViewInterface() {
@@ -141,7 +143,7 @@ function paintSubtitle() {
   let hourText = "00";
   if (hours < 12) {
     amPm = "am";
-    hourText = hours < 10 ? `0${hours}` : hours;
+    hourText = `${hours}`;
   } else {
     amPm = "pm";
     hourText = `${hours - 12}`;
@@ -151,6 +153,14 @@ function paintSubtitle() {
   const minuteText = minutes < 10 ? `0${minutes}` : minutes;
 
   subtitle.innerText = `Freedom Comes On ${dayName}, ${date} ${monthName} ${year} ${hourText}:${minuteText}${amPm}`;
+}
+
+function resetTimeOver() {
+  timeNums.forEach((timeNum, index) => {
+    timeNum.innerText = '00';
+    const timeContainer = timeNum.parentNode;
+    timeContainer.classList.remove(TIME_OVER_CN);
+  })
 }
 
 function init() {
