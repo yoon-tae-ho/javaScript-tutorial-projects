@@ -24,6 +24,7 @@ body {
   letter-spacing: 5px;
 
   margin-top: 100px;
+  text-align: center;
 }
 
 .header__lorem-form {
@@ -75,4 +76,5 @@ body {
 
 .paragraph-container p {
   margin-bottom: 30px;
+  text-align: center;
 }
