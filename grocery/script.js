@@ -87,11 +87,12 @@ function resumeAddSubmit() {
 function handleModifySubmit(event, targetItem, index) {
   event.preventDefault();
   const newValue = headerInput.value;
+  const capitalizedNewValue = capitalizeFirstLetter(newValue);
   headerInput.value = "";
 
   // modify item element text
   const itemNameElement = targetItem.querySelector(`.${ITEM_NAME_CN}`);
-  itemNameElement.innerText = newValue;
+  itemNameElement.innerText = capitalizedNewValue;
 
   // modify value of itemObjs
   itemObjs[index].value = newValue;
@@ -127,6 +128,10 @@ function modifyItem(event) {
   saveItems();
 }
 
+function capitalizeFirstLetter(text) {
+  return text[0].toUpperCase() + text.slice(1, text.length);
+}
+
 function paintItem(itemObj) {
   const list = document.createElement("li");
   list.classList.add(ITEM_LI_CN);
@@ -134,7 +139,8 @@ function paintItem(itemObj) {
 
   const itemName = document.createElement("h4");
   itemName.classList.add(ITEM_NAME_CN);
-  itemName.innerText = itemObj.value;
+  const capitalizedItemName = capitalizeFirstLetter(itemObj.value);
+  itemName.innerText = capitalizedItemName;
 
   const modifyBtn = document.createElement("button");
   modifyBtn.classList.add(ITEM_MODIFY_BTN_CN);
