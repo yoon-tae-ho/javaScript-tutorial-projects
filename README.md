@@ -9,3 +9,5 @@
 [lorem-ipsum project](https://yoon-tae-ho.github.io/javaScript-tutorial-projects//lorem-ipsum/index.html)
 
 [grocery project](https://yoon-tae-ho.github.io/javaScript-tutorial-projects//grocery/index.html)
+
+[drag-and-drop project](https://yoon-tae-ho.github.io/javaScript-tutorial-projects//drag-and-drop/index.html)
