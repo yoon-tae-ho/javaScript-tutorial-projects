@@ -32,11 +32,13 @@ let timeoutID = "";
 
 function loadItems() {
   const loadedItemObjs = localStorage.getItem(ITEMS_LS);
-  const parsedItemObjs = JSON.parse(loadedItemObjs);
 
-  parsedItemObjs.forEach(parsedItemObj => {
-    paintItem(parsedItemObj);
-  })
+  if (loadedItemObjs) {
+    const parsedItemObjs = JSON.parse(loadedItemObjs);
+    parsedItemObjs.forEach(parsedItemObj => {
+      paintItem(parsedItemObj);
+    })
+  }
 }
 
 function saveItems() {
