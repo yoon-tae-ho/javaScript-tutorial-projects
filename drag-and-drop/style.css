@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: darksalmon;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main__dropzone {
+  width: 160px;
+  height: 160px;
+  background-color: whitesmoke;
+  border: 3px solid salmon;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__draggable-box {
+  width: 150px;
+  height: 150px;
+  background-image: url("http://source.unsplash.com/random/150x150");
+  cursor: pointer;
+}
+
+.hold {
+  border: 4px solid #ccc;
+}
+
+.hovered {
+  background-color: #f4f4f4;
+  border-style: dashed;
+}
+
+.invisible {
+  display: none;
+}
