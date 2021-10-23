@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Grocery Bud</title>
+</head>
+<body style="background-color: #f2f7fe;">
+  <main class="main">
+    <section class="main__state-bar">
+      <span class="main__state main__empty-state main__state--red hidden">Please Enter Value</span>
+      <span class="main__state main__remove-state main__state--red hidden">Item Removed</span>
+      <span class="main__state main__remove-all-state main__state--red hidden">Empty List</span>
+      <span class="main__state main__add-state main__state--green hidden">Item Added To The List</span>
+      <span class="main__state main__change-state main__state--green hidden">Value Changed</span>
+    </section>
+
+    <header class="main__header">
+      <h1 class="main__title">Grocery Bud</h1>
+
+      <form class="main__header-form">
+        <input type="text" placeholder="e.g. eggs" class="main__header-input">
+        <input type="submit" value="Submit" class="main__header-btn">
+      </form>
+    </header>
+
+    <ul class="main__item-list">
+      <!-- e.g.
+      <li class="main__item">
+          <h4 class="main__item-name">eggs</h4>
+          <button class="main__modify-btn"><i class="fas fa-edit fa-xs"></i></button>
+          <button class="main__delete-btn"><i class="fas fa-trash fa-xs"></i></button>
+      </li> -->
+    </ul>
+
+    <footer class="main__footer">
+      <button class="main__delete-all-btn">Clear Items</button>
+    </footer>
+  </main>
+</body>
+</html>
