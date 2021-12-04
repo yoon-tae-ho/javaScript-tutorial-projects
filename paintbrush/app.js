@@ -5,7 +5,7 @@ const ctx = canvas.getContext('2d');
 
 const INITIAL_COLOR = "#2c2c2c";
 
-// Default Canvas Background Color
+// Default Canvas Background Color for Image Saving
 ctx.fillStyle = "white";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -116,3 +116,20 @@ if (saveBtn) {
     saveBtn.addEventListener("click", saveImage);
     canvas.addEventListener("contextmenu", handleContextMenu);
 }
+
+// Clear Canvas
+
+const clearBtn = document.querySelector("#jsClear");
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const currentFillStyle = ctx.fillStyle;
+    
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = currentFillStyle;
+}
+
+clearBtn.addEventListener("click", clearCanvas);
